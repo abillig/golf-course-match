@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Choose The Best Golf Course</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      background: white;
+    }
+
+    .myButton {
+    	background-color:#44c767;
+    	-moz-border-radius:28px;
+    	-webkit-border-radius:28px;
+    	border-radius:28px;
+    	border:1px solid #18ab29;
+    	display:inline-block;
+    	cursor:pointer;
+    	color:#ffffff;
+    	font-family:Arial;
+    	font-size:17px;
+    	padding:6px 21px;
+    	text-decoration:none;
+    	text-shadow:0px 1px 0px #2f6627;
+    }
+
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.previousRows{
+  font-size:10px;
+}
+
+.previousRows button{
+  /*padding:5px 11px;
+  font-size:12px;*/
+
+}
+
+    #decisionBox{
+      background: white;
+      text-align: center;
+      padding: 2%;
+      font-family: 'arial';
+      padding-bottom: 15%;
+    }
+
+    .red{
+      background: #5cbf2a;
+      color: black;
+    }
+
+    #buttons{
+      display: inline-block;
+    }
+    .modal-window {
+      position:fixed;
+  /*background-color: rgba(255,255,255,0.5);*/
+    	top:0;
+    	right:0;
+    	bottom:0;
+    	left:0;
+    	z-index:999;
+    	/*opacity:0;*/
+    	pointer-events:none;
+    	-webkit-transition:all 0.3s;
+    	-moz-transition:all 0.3s;
+    	transition:all 0.3s;
+    }
+
+    #button{
+      display: inline-block;
+    }
+
+    .selectedButton{
+      background: blue;
+      color: white;
+    }
+
+    #lohudQuestioner{
+      position: relative;
+ padding: 15px;
+ margin: 1em 0 3em;
+ color: #000;
+ background: #f3961c;
+ border-radius: 10px;
+ background: linear-gradient(top, #f9d835, #f3961c);
+      /*background-image: url("http://bestanimations.com/Music/MirrorBalls/disco-ball-animated-gif-4.gif");*/
+      /*background-size: 100vw 100px;
+    background-repeat: no-repeat;*/
+    }
+
+    #lohudQuestioner:after {
+  content: "";
+  display: block; /* reduce the damage in FF3.0 */
+  position: absolute;
+  bottom: -15px;
+  left: 50px;
+  width: 0;
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: #f3961c transparent;
+}
+
+
+    .headerText{
+      position: absolute;
+      text-align: center;
+      font-size: 3.0vh;
+      margin-top: -20vh;
+      /*margin-left: 40vw;
+      margin-right: 25vw;*/
+      /*color: white;*/
+      background-color: rgba(255, 255, 255, .5);
+      border-radius: 5px;
+      padding: 1%;
+      margin-left: 25%;
+      width: 50%;
+    }
+
+    .optionButtonsContainer{
+      /*margin-top: 20%;*/
+      /*position: absolute;*/
+      /*margin-left: 10vw;*/
+      /*box-shadow: 0px 2px #555 inset;*/
+
+    }
+
+    .optionButtons{
+      text-align: center;
+      /*margin-left: 20vw;*/
+      /*margin-right: 20vw;*/
+      margin-left: 10%;
+      width: 80%;
+      /*margin-top: 1%;*/
+    }
+
+
+    .img-circle {
+      width: 20% !important ;
+      height: 20% !important ;
+    }
+
+    button:focus {outline:0;}
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+      .optionButtons{
+        margin-left: 5%;
+        width: 90%;
+      }
+
+      .explanation{
+        width: 90%;
+        margin-left: 5%;
+      }
+
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id='banner' style="height:77px;"></div>
+  <script>
+  if(window.self==window.top) {
+    var banner = document.getElementById("banner");
+    banner.style.backgroundColor = "white";
+    banner.innerHTML = "<a href='http://www.lohud.com'><img src='https://www.gannett-cdn.com/sites/lohud/images/site-masthead-logo-dark@2x.png' width='150' /></a><br>";
+  }
+  </script>
+    <div id="root"></div>
+    <script type="text/babel" src="./helpers.js"></script>
+
+  </body>
+</html>
