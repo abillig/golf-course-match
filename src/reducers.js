@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 import coursesObject from './courses.js';
 
 var initialState = {
-    currentText: "Help us choose the best golf course for you. Answer these 5 questions and we'll match you with a nearby course.",
+    currentText: "Help us match you with a nearby golf course by answering 5 easy questions. Just press 'Begin' below and remember, you can change your selections at any time.",
+    // currentText: "Hi I'm Mike Dougherty, sports reporter at the Journal News. My colleague Vince Mercogliano and I are here to match you with a nearby golf course. Just answer 5 quick questions and we'll select the best one for you. Also, you can change your selections at any time.",
     currentOptions: ["Begin"],
     courseMatch: null,
     loading: false

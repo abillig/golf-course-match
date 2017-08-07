@@ -7,9 +7,26 @@
 
     <style>
 
+
+
+    #root{
+      padding: 2%;
+       background-color: rgba(255, 255, 255, .9);
+      border-radius: 25px;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+-webkit-box-shadow: inset 0 0 10px #000000;
+box-shadow:         inset 0 0 10px #000000;
+    }
+
     body {
       -webkit-font-smoothing: antialiased;
       background: white;
+      font-family: "Unify";
+    }
+
+    @font-face {
+      font-family: "Unify";
+      src: url('UnifySans_W_Rg.woff') format("truetype");
     }
 
     .myButton {
@@ -20,12 +37,18 @@
     	border:1px solid #18ab29;
     	display:inline-block;
     	cursor:pointer;
-    	color:#ffffff;
-    	font-family:Arial;
+    	color:#000;
+    	font-family:"Unify";
     	font-size:17px;
     	padding:6px 21px;
     	text-decoration:none;
     	text-shadow:0px 1px 0px #2f6627;
+    }
+
+    #recommendation{
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 2%;
     }
 
 .myButton:hover {
@@ -46,22 +69,31 @@
 
 }
 
+  #changeSelectionText{
+    font-size: 24px;
+  }
+
     #decisionBox{
+      margin-top: 4%;
       /*background: gray;*/
       border-radius: 5%;
-      background: #d3d3d3;
+      /*background: #d3d3d3;*/
     border: 5px solid #019bff;
       /*text-align: center;*/
       padding: 2%;
-      font-family: 'arial';
-      padding-bottom: 15%;
-      width: 50%;
-      margin-left: 25%;
+      font-family: 'Unify';
+      padding-bottom: 5%;
+      width: 70%;
+      margin-left: 15%;
 
     }
 
+    .me{
+      font-size: 2.0vw !important;
+    }
+
     .red{
-      background: #5cbf2a;
+      background: #75fd30;
       color: black;
     }
 
@@ -167,6 +199,19 @@
         text-align: left;
     }
 
+    html, body{
+      padding: 0;
+      margin: 0;
+    }
+
+    #opener{
+      padding: 2%;
+      background-color: #abdef5;
+      /*background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/70/Golf_course_-_Green_Lakes_State_Park.jpg");*/
+      /*background-repeat: no-repeat;*/
+      /*background-size: 100% 100%;*/
+      height: 150vh;
+    }
 
 
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -180,20 +225,62 @@
         margin-left: 5%;
       }
 
+      .me{
+        font-size: 2.5vh !important;
+        margin-right: 15px !important;
+        margin-left: 15px !important;
+      }
+
+      .bubble.me::before{
+        display: none;
+      }
+
+      .img-circle{
+        display: none;
+      }
+
+      .myButton{
+        padding: 0px 9px;
+      }
+
+      #root{
+        padding-top: 10%;
+        padding-bottom: 10%;
+      }
+
+      #decisionBox{
+        border: none;
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      #changeSelectionText {
+          font-size: 20px;
+      }
+
     }
+
+
+
+
+
 
     </style>
   </head>
   <body>
+    <div id="opener">
     <div id='banner' style="height:77px;"></div>
+    <h1 style="text-align: center;">Lohud Golf Guide</h1>
   <script>
   if(window.self==window.top) {
     var banner = document.getElementById("banner");
-    banner.style.backgroundColor = "white";
+    // banner.style.backgroundColor = "white";
     banner.innerHTML = "<a href='http://www.lohud.com'><img src='https://www.gannett-cdn.com/sites/lohud/images/site-masthead-logo-dark@2x.png' width='150' /></a><br>";
   }
   </script>
     <div id="root"></div>
+  </div>
+
     <script type="text/babel" src="./helpers.js"></script>
 
   </body>

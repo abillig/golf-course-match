@@ -34,6 +34,7 @@ render(){
           matched["no"].push(sentenceConstructorObject[courseObject[categ]])
         }
       }
+
     const feedback =  <FeedbackBullets courseMatch={this.props.courseMatch} matches={matched}/>
 
 
@@ -46,9 +47,9 @@ render(){
     } else {
       var selectionObj =
       <div id="decisionBox">
-        <h3>We recommend...<strong> {this.props.courseMatch}</strong></h3>
+        <div id="recommendation">We recommend...<br></br><strong> {this.props.courseMatch}</strong></div>
         <div>{feedback}</div>
-        <div>Change your choices above to check out other matches. Our recommendation will automagically adjust.</div>
+        <div id="changeSelectionText">Change your selections above to check out other matches. Our recommendation will automagically adjust.</div>
       </div>
     }
   } else {

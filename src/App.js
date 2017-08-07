@@ -35,7 +35,9 @@ class App extends React.Component {
           this.props.matchUserToCourse()
         }
 
-        var urls = ["https://pbs.twimg.com/profile_images/792394525113192448/ozEiOlaL.jpg","https://pbs.twimg.com/profile_images/851986160826163201/WFdHMiN6.jpg"];
+        var urls=["https://pbs.twimg.com/profile_images/879428269560528897/OUkmwsMH_400x400.jpg"]
+
+        // var urls = ["https://pbs.twimg.com/profile_images/792394525113192448/ozEiOlaL.jpg","https://pbs.twimg.com/profile_images/851986160826163201/WFdHMiN6.jpg"];
       function getUrl() {
         // debugger;
          return urls[Math.floor(Math.random() * urls.length)];
@@ -74,7 +76,7 @@ class App extends React.Component {
 
 
       return (
-        <div>
+        <div id="allOfIt">
           {previousRows}
           {chatBubbleUntilEnd}
           {currentQuestionRow}
